@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cwd2ahedoj2ow"]
+
+[ext_resource type="Texture2D" uid="uid://ddnip2thpqp3b" path="res://assets/Untitled-1.png" id="1_r4rr0"]
+[ext_resource type="Texture2D" uid="uid://3neqncfcniie" path="res://assets/download (8).png" id="2_r4rr0"]
+[ext_resource type="Script" uid="uid://vxd3hiaqad8c" path="res://script/playermovement.gd" id="3_r4rr0"]
+[ext_resource type="Script" uid="uid://d0n1ijvp11utt" path="res://script/Pumkincatching.gd" id="4_87u6u"]
+[ext_resource type="PackedScene" uid="uid://d2l8kb646i5r1" path="res://scenes/Game/candy.tscn" id="4_pengp"]
+[ext_resource type="Script" uid="uid://dgbiiojn672qs" path="res://script/CandySpawner.gd" id="5_8eqtv"]
+[ext_resource type="PackedScene" uid="uid://dm2cppyhcaw4y" path="res://scenes/Game/candy_2.tscn" id="6_87u6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2vcg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87u6u"]
+size = Vector2(22.141136, 18.831348)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylmpl"]
+
+[node name="Contohmain" type="Node2D" unique_id=1395320104]
+position = Vector2(-1, 3)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1489977913]
+propagate_maximum_size = true
+offset_right = 1156.0
+offset_bottom = 651.0
+texture = ExtResource("1_r4rr0")
+expand_mode = 1
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=762491649]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1002834426]
+position = Vector2(550, 580)
+scale = Vector2(0.18783785, 0.18853308)
+texture = ExtResource("2_r4rr0")
+region_rect = Rect2(8, 24, 88, 80)
+script = ExtResource("3_r4rr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=895067654]
+position = Vector2(552, 592)
+scale = Vector2(6.193834, 4.527939)
+shape = SubResource("RectangleShape2D_a2vcg")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=1326622330]
+script = ExtResource("4_87u6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1305784930]
+position = Vector2(551.5, 591.5)
+scale = Vector2(5.5552716, 4.83237)
+shape = SubResource("RectangleShape2D_87u6u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1629606983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=169185482]
+shape = SubResource("RectangleShape2D_ylmpl")
+
+[node name="CandySpawner" type="Node2D" parent="." unique_id=949591304]
+script = ExtResource("5_8eqtv")
+candy_scene = ExtResource("4_pengp")
+candy_scene_2 = ExtResource("6_87u6u")

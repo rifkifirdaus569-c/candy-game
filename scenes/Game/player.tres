@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cj3ak1k8bmlp5"]
+
+[ext_resource type="Texture2D" uid="uid://cwaqfr23sv5a3" path="res://assets/asset.png" id="1_hiuhr"]
+[ext_resource type="Script" uid="uid://vxd3hiaqad8c" path="res://script/playermovement.gd" id="2_jgvpv"]
+
+[resource]
+atlas = ExtResource("1_hiuhr")
+script = ExtResource("2_jgvpv")

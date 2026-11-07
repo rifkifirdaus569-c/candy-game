@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d3kyfjrysxemh"]
+
+[ext_resource type="Texture2D" uid="uid://dxcg1bjxhi0ia" path="res://scenes/Game/player.tres" id="1_vog0c"]
+
+[node name="Node2D" type="Node2D" unique_id=707876178]
+position = Vector2(-1, 3)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1332861111]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1387719876]
+texture = ExtResource("1_vog0c")

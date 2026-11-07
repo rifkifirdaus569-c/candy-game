@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dm2cppyhcaw4y"]
+
+[ext_resource type="Texture2D" uid="uid://dcripqr0kmen5" path="res://assets/Pink_Lollipop_Vector_Illustration_With_Cute_Design_Isolated_On_White_Background__Cute__Sweet__Lollipop_PNG_and_Vector_with_Transparent_Background_for_Free_Download-removebg-preview.png" id="1_cosrx"]
+[ext_resource type="Script" uid="uid://bcfjgkyrr8sqc" path="res://script/CandyFall.gd" id="1_hy3kw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xy25"]
+radius = 15.791563
+
+[node name="Candy2" type="Area2D" unique_id=1240036535 groups=["candy"]]
+collision_mask = 0
+script = ExtResource("1_hy3kw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145191648 groups=["candy"]]
+position = Vector2(-3, -3.0000305)
+scale = Vector2(0.1998102, 0.18515632)
+texture = ExtResource("1_cosrx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109335398 groups=["candy"]]
+position = Vector2(-11, -8.0000305)
+rotation = -1.2182691
+scale = Vector2(2.0700636, 1.5156395)
+shape = SubResource("CircleShape2D_2xy25")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cwd2ahedoj2ow"]
+
+[ext_resource type="Texture2D" uid="uid://fd1mnxqicvlk" path="res://assets/backrgound.jpg" id="1_g7xkg"]
+[ext_resource type="Texture2D" uid="uid://dxcg1bjxhi0ia" path="res://scenes/Game/player.tres" id="2_r4rr0"]
+[ext_resource type="Script" uid="uid://vxd3hiaqad8c" path="res://script/playermovement.gd" id="3_r4rr0"]
+
+[node name="Contohmain" type="Node2D" unique_id=1395320104]
+position = Vector2(-1, 3)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1489977913]
+propagate_maximum_size = true
+offset_right = 1156.0
+offset_bottom = 651.0
+texture = ExtResource("1_g7xkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002834426]
+position = Vector2(83, 478)
+scale = Vector2(1.7375, 1.7125)
+texture = ExtResource("2_r4rr0")
+script = ExtResource("3_r4rr0")
+speed = null

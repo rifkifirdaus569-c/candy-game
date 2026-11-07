@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d2l8kb646i5r1"]
+
+[ext_resource type="Script" uid="uid://bcfjgkyrr8sqc" path="res://script/CandyFall.gd" id="1_r66i0"]
+[ext_resource type="Texture2D" uid="uid://cm8hnhruadwpk" path="res://assets/download__10_-removebg-preview.png" id="2_r66i0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ru63w"]
+radius = 19.099415
+
+[node name="Candy" type="Area2D" unique_id=544496198 groups=["candy"]]
+scale = Vector2(0.99437976, 1)
+collision_mask = 0
+script = ExtResource("1_r66i0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744037952]
+position = Vector2(-1.0056763, -3.0000153)
+scale = Vector2(0.1998102, 0.18515632)
+texture = ExtResource("2_r66i0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2049194090 groups=["candy"]]
+position = Vector2(-6.0339355, -1.0000153)
+rotation = -0.47211492
+scale = Vector2(2.3021157, 1.4396551)
+shape = SubResource("CircleShape2D_ru63w")
